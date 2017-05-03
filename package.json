@@ -1,14 +1,23 @@
 {
   "name": "sanyuelanv-circle",
-  "version": "1.2.0",
-  "description": "",
+  "version": "1.2.2",
+  "description": "this is a circle-progress who use svg to work",
   "main": "lib/circle.js",
   "scripts": {
     "dep": "./node_modules/.bin/babel ./src --out-dir ./lib",
     "demo": "webpack-dev-server --devtool eval --progress --colors --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanyuelanv/react-circle-progress.git"
+  },
+  "author": "sanyuelanv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanyuelanv/react-circle-progress/issues"
+  },
+  "homepage": "https://github.com/sanyuelanv/project#readme",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
