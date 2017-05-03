@@ -1,0 +1,27 @@
+{
+  "name": "sanyuelanv-circle",
+  "version": "1.2.0",
+  "description": "",
+  "main": "lib/circle.js",
+  "scripts": {
+    "dep": "./node_modules/.bin/babel ./src --out-dir ./lib",
+    "demo": "webpack-dev-server --devtool eval --progress --colors --content-base build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
