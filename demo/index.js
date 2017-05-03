@@ -66,6 +66,7 @@ class App extends Component {
           gradientDirection = {"horizontal"/*horizontal*/}
           showText = {true}
           textStyle = {{size:30,color:"#555",type:2}}
+          linecap = {"round"}
           gradient = {
             [
               {offset:0,color:"rgb(255,255,0)",opacity:1},

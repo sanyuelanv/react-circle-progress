@@ -16,6 +16,7 @@ class Circle extends Component {
     this.gradientDirection = this.props.gradientDirection || "vertical"
     this.showText = this.props.showText == false ? this.props.showText : true
     this.textStyle = this.props.textStyle || {size:12,color:"#555",type:0}
+    this.linecap = this.props.linecap || "square"
 	}
   _renderLinearGradient(){
     let {gradient,} = this.props
@@ -62,6 +63,7 @@ class Circle extends Component {
             WebkitTransition: "all "+this.time+"s linear",
             strokeDashoffset: this.allLength * (1-current),
             strokeDasharray: this.allLength,
+            strokeLinecap:this.linecap,
             stroke:gradient?"url('#sanyuelanvGradient')":this.pbc,
             fill:this.pbf,
             strokeWidth:this.sw,
