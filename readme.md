@@ -40,6 +40,8 @@
 | gradientDirection | string | 进度条渐变方向[vertical,horizontal] | vertical |  
 | gradient | object | 进度条渐变配置 | null |  
 | current | number | 进度条当前进度（范围0-1） | 无 |  
+| showText | Boolean | 是否显示文字 | 无 |  
+| textStyle | object | 文字样式(目前只能上下左右居中),type参数是文字显示形式。0:带百分比符号的整型数，1:不带百分比的两位小数，2：不带百分比的整型数 | {size:12,color:"#555",type:0} |
 
 
 ## 启动例子
