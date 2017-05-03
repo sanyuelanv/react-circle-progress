@@ -64,6 +64,8 @@ class App extends Component {
           current = {this.state.current}
           startPoint = {0}
           gradientDirection = {"horizontal"/*horizontal*/}
+          showText = {true}
+          textStyle = {{size:30,color:"#555",type:2}}
           gradient = {
             [
               {offset:0,color:"rgb(255,255,0)",opacity:1},

@@ -14,6 +14,8 @@ class Circle extends Component {
     this.allLength = Math.PI * 2 * this.r
     this.startPoint = this.props.startPoint-90 || -90
     this.gradientDirection = this.props.gradientDirection || "vertical"
+    this.showText = this.props.showText == false ? this.props.showText : true
+    this.textStyle = this.props.textStyle || {size:12,color:"#555",type:0}
 	}
   _renderLinearGradient(){
     let {gradient,} = this.props
@@ -32,6 +34,17 @@ class Circle extends Component {
           {arr}
         </linearGradient>
       </defs>
+    )
+  }
+  _renderText(current){
+    if(!this.showText)return
+    let {color,size,type} = this.textStyle
+    let res = current
+    if(type == 0){res = parseInt(current*100) + "%"}
+    else if(type == 1){res = current}
+    else if(type == 2){res = parseInt(current*100)}
+    return(
+      <text x="50%" y="50%" dy={size/2} textAnchor="middle" style={{fontSize:size+'px',fill:color}}>{res}</text>
     )
   }
   render() {
@@ -53,10 +66,9 @@ class Circle extends Component {
             fill:this.pbf,
             strokeWidth:this.sw,
           }}
-
         >
         </circle>
-        <text x="50%" y="50%" dy=".35em" textAnchor="middle">{parseInt(current*100) + "%"}</text>
+        {this._renderText(current)}
       </svg>
     )
   }
